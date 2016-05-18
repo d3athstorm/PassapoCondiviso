@@ -1,0 +1,97 @@
+<html>
+<head>
+<title></title>
+<style>
+#pippo{
+	width: 100%;
+	height: 50;
+	border: 0px #1e1e1e solid;
+	text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	background-color: #DDA0DD;
+	display: block;
+}
+
+li {
+    float: center;
+	display: inline;
+	background-color: #DDA0DD;
+}
+
+li a {
+    display: inline;
+    padding: 30px;
+	color: #3244E4;
+	font-weight: bold;
+	font-size: 50;
+	text-decoration: none;
+	font-family: Edwardian Script ITC;
+}
+li a:hover {
+	background-color: #DC58D9;
+}
+topnav ul {
+  margin: 0;
+  padding:0;
+  list-style: none;
+}
+ul.topnav li.icon {
+	display: none;
+}
+@media screen and (max-width:1050px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+ }
+}
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body width="100%">
+<div id="pippo">
+<ul class="topnav">
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="default.asp">Galleria</a>
+<!--       <ul> -->
+<!--         <li><a href="#">item</a></li> -->
+<!--         <li><a href="#">item</a></li> -->
+<!--         <li><a href="#">item</a></li> -->
+<!--         <li><a href="#">item</a></li> -->
+<!--       </ul> -->
+  </li>
+  <li><a href="news.asp">Catalogo</a></li>
+  <li><a href="contact.asp">Contatti</a></li>
+  <li><a href="about.asp">Dove Siamo</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+  </li>
+</ul>
+</div>
+<script>
+function myFunction() {
+    document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+}
+</script>
+</body>
+</html>
