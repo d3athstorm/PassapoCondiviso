@@ -4,7 +4,7 @@
 		<title></title>
 		<link href="index.css" rel="stylesheet">
 	</head>
-	<body width="100%">
+	<body>
 		<div id="logo" style="position:absolute;top:5%;width:100%;">
 			<img alt="" src="img/Passapo-logo-grigio-300x300.png">
 			<div id="testata" style="position:relative;top:5%;width:100%">
@@ -34,6 +34,7 @@
 						  </li>
 						</ul>
 					</nav>
+				</div>
 			</div>
 		</div>
 		<script>
