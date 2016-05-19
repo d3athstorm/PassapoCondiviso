@@ -1,9 +1,24 @@
 @CHARSET "ISO-8859-1";
 #pippo{
 	width: 100%;
-	height: 50;
+	height: 2000;
 	border: 0px #1e1e1e solid;
 	text-align: center;
+}
+#logo{
+	text-align: center;
+	height: 300;
+}
+#testata{
+	text-align: center;
+}
+#presentation{
+	text-align: center;
+	text-decoration: justify;
+	paddin-left: 20;
+	padding-right: 20;
+	padding-top:50;
+	font-size:20px;
 }
 nav {
     background: #444;
