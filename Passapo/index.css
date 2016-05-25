@@ -21,6 +21,15 @@
 	padding-bottom:20;
 	font-size:25px;
 }
+#indirizzo{
+	margin: auto 20px auto 250px;
+	text-align: left;
+	font-size:30px;
+}
+#googleMap {
+	margin-right: 30px;
+	margin-bottom:20px;
+}
 p.text {
 	padding-bottom:20px;
 }
@@ -78,4 +87,7 @@ nav ul li.parent ul.child li a {
 }
 nav li.icon{
 	display: none;
+}
+p.ind {
+	font: italic bold 20px/30px Georgia, serif;
 }
