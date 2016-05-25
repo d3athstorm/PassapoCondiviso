@@ -35,6 +35,17 @@
 						</ul>
 					</nav>
 				</div>
+				<div id="indirizzo" style="float:left;position:relative;top:100px;width:100%;margin-bottom:50px;z-index:-1;">
+					<p>
+						Per ordini o informazioni:<br>
+					</p>
+					<p class="ind">
+						<font>
+							Mail: <a href="mailto:passapomilano@gmail.com">passapomilano@gmail.com</a><br>
+							Telefono: +39.335.8010339
+						</font>
+					</p>
+				</div>
 			</div>
 		</div>
 		<script>
