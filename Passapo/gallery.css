@@ -1,0 +1,50 @@
+html{
+	margin:0;
+	padding:0
+}
+body{
+	font: 12px arial,sans-serif;
+	margin:0;
+	padding: 0 5px
+}
+img{
+	border:0
+}
+div#container{
+	width:740px;
+	text-align: center;
+}
+div#zoom{
+	text-align: center;
+	margin:0 0 5px 0;
+	padding: 5px;
+	border:1px solid #ccc
+	width: 100%;
+	height: 500;
+}
+div#zoom h3{
+	margin:0;font-size:100%;
+	color: #666;
+	text-align:center;
+}
+div#zoom img{
+	display:block;
+	left:50%; 
+	top:50%;
+	width:400px;
+	height:600px;
+}
+div#minipics{
+	float:left;
+	margin-right:415px;
+}
+div#minipics ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0
+}
+div#minipics li{
+	margin:0 5px 5px 5px;
+	border:1px solid #ccc;
+	padding: 3px;
+}
