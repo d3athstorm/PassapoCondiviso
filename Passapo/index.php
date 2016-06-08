@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 	<head>
-		<title></title>
+		<title>Passapò Milano</title>
+		<meta name="author" content="Moro Stefano - stefanomoro23@gmail.com">
 		<link href="index.css" rel="stylesheet">
 	</head>
 	<body>
@@ -11,7 +12,7 @@
 				<img alt="" src="img/immagine-testata-passapo.jpg">
 				<div id="pippo" style="position:relative;top:20%;">
 					<nav>
-						<ul class="topnav" style="z-index: 0;">
+						<ul class="topnav">
 						  <li><a href="index.php">Home</a></li>
 						  <li class="parent"><a href="">Galleria</a>
 						      <ul class="child">

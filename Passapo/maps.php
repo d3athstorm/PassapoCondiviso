@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title></title>
+		<title>Passapò Milano</title>
 		<link href="index.css" rel="stylesheet">
 		<script src="http://maps.googleapis.com/maps/api/js"></script>
 		<script>
@@ -72,7 +72,7 @@
 							</font>
 						</p>
 					</div>
-					<div id="googleMap" style="float:right;position:relative;width:50%;height:800px;z-index:1;">	
+					<div id="googleMap" style="float:right;position:relative;width:50%;height:800px;z-index:1;">
 					</div>
 			</div>
 		</div>

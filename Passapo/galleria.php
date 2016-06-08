@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title></title>
+		<title>Passapò Milano</title>
 		<link href="index.css" rel="stylesheet">
 		<link rel="stylesheet" href="gallery.css">
 		<script type="text/javascript" src="onpage.js"></script>
@@ -13,7 +13,7 @@
 				<img alt="" src="img/immagine-testata-passapo.jpg">
 				<div id="pippo" style="position:relative;top:20%;">
 					<nav>
-						<ul class="topnav" style="z-index: 0;">
+						<ul class="topnav">
 						  <li><a href="index.php">Home</a></li>
 						  <li class="parent"><a href="">Galleria</a>
 						      <ul class="child">
@@ -38,40 +38,39 @@
 					</nav>
 				</div>
 				<div id="container">
-<!-- 				  <div id="header"><img src="header.jpg" alt="Logo" title="Galleria digitale"> -->
-<!-- 				  <h2>Esperimenti digitali. © HTML.it & Alessandro Fulciniti</h2> -->
-<!-- 				  </div> -->
 				  <div id="gallery">
 				    <div id="zoom"><h3 id="titolo">Clicca sulle miniature per vedere gli ingrandimenti.</h3>
-				        <img src="img/empty.jpg" id="bigimage" alt="">
+				        <img src="img/empty.jpg" id="bigimage" alt="" >
 				    </div>
 				    <div id="minipics">
 				      <ul>
 							<?php
-								$i=0;
-								$imgLink=array();
-								// percorso della directory da leggere
-								$directory = "img/galleria/cerimonia";
-								
-								// apro la directory
-								$open_handle = opendir($directory);
-								
-								// ciclo while() per scorrere tutto il contenuto
-								while($read = readdir($open_handle)) {
-								
-								// escludo . e ..
-								
-									if($read != "." && $read != "..") {
+								if ($_REQUEST['categoria']=="cerimonia"){
+									$i=0;
+									$imgLink=array();
+									// percorso della directory da leggere
+									$directory = "img/galleria/cerimonia";
 									
-										$imgLink[$i]=$read;
-										echo '<li><a href="' . $directory . '/'. $read .'"><img src="' . $directory . '/'. $read .'" alt="'. $read .'" title=" " height="60" width="60"></a></li>';
-										$i++;
+									// apro la directory
+									$open_handle = opendir($directory);
+									// ciclo while() per scorrere tutto il contenuto
+									while($read = readdir($open_handle)) {
 									
+									// escludo . e ..
+									
+										if($read != "." && $read != "..") {
+											//$dimWidth = imagesx($read);
+											$name = explode('.', $read);
+											$imgLink[$i]=$read;
+											if ($name[0]!= "small") echo '<li><a href="' . $directory . '/'. $read .'"><img src="' . $directory . '/small/'. $name[0] .'_small.jpg" alt="'. $read .'" title=" " height="60" width="60"></a></li>';
+											$i++;
+										
+										}
 									}
+									
+									// chiudiamo la directory
+									closedir($open_handle);
 								}
-								
-								// chiudiamo la directory
-								closedir($open_handle);
 								
 							?>
 
