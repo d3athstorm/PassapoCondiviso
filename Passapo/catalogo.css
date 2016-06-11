@@ -33,21 +33,21 @@ div#zoom{
 }
 div#zoom h3{
 	text-align:center;
+	height:40px;
 	margin:0;
-	font-size:100%;
+	font-size:30px;
 	color: #666;
-	text-align:left;
 	padding-left: 5%;
 }
 div#zoom img{
 	margin:0;
 	display:block;
-	width:400px/*400*/;
+	width:800px/*400*/;
 	height:600px;
 	z-index: -2;
 	position:absolute;
 	left:50%;
-	margin-left:-200px;
+	margin-left:-400px;
 }
 div#minipics{
 	float:left;

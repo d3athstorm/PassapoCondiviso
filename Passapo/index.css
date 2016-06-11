@@ -5,13 +5,16 @@
 	border: 0px #1e1e1e solid;
 	text-align: center;
 	z-index: 10;
+	margin:0;
 }
 #logo {
+	margin:0;
 	text-align: center;
 	height: 300;
 }
 #testata {
 	text-align: center;
+	margin:0;
 }
 #presentation {
 	text-align: center;

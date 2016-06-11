@@ -3,6 +3,8 @@
 	<head>
 		<title>Passapò Milano</title>
 		<link href="index.css" rel="stylesheet">
+		<link rel="stylesheet" href="catalogo.css">
+		<script type="text/javascript" src="onpage.js"></script>
 	</head>
 	<body>
 		<div id="logo" style="position:absolute;top:5%;width:100%;">
@@ -11,7 +13,7 @@
 				<img alt="" src="img/immagine-testata-passapo.jpg">
 				<div id="pippo" style="position:relative;top:20%;">
 					<nav>
-						<ul class="topnav" style="z-index: 0;">
+						<ul class="topnav">
 						  <li><a href="index.php">Home</a></li>
 						  <li class="parent"><a href="">Galleria</a>
 						      <ul class="child">
@@ -34,6 +36,48 @@
 						  </li>
 						</ul>
 					</nav>
+				</div>
+				<div id="container">
+				  <div id="gallery">
+				    <div id="zoom"><h3 id="titolo">Clicca sulle miniature per vedere gli ingrandimenti.</h3>
+				        <img src="img/empty.jpg" id="bigimage" alt="" >
+				    </div>
+				    <div id="minipics" style="padding-top: 35px;">
+				      <ul>
+							<?php
+								if ($_REQUEST['categoria']=="cerimonia"){
+									$i=0;
+									$imgLink=array();
+									// percorso della directory da leggere
+									$directory = "img/catalogo/cerimonia";
+									
+									// apro la directory
+									$open_handle = opendir($directory);
+									// ciclo while() per scorrere tutto il contenuto
+									while($read = readdir($open_handle)) {
+									
+									// escludo . e ..
+									
+										if($read != "." && $read != "..") {
+											//$dimWidth = imagesx($read);
+											$name = explode('.', $read);
+											$imgLink[$i]=$read;
+											if ($name[0]!= "small") echo '<li><a href="' . $directory . '/'. $read .'"><img src="' . $directory . '/small/'. $name[0] .'_small.jpg" alt="'. $read .'" title="'. $name[0] .'" height="60" width="60"></a></li>';
+											$i++;
+										
+										}
+									}
+									
+									// chiudiamo la directory
+									closedir($open_handle);
+								}
+								
+							?>
+
+				      </ul>
+				      <div style="clear:left">&nbsp;</div>
+				    </div>
+				  </div>
 				</div>
 			</div>
 		</div>
